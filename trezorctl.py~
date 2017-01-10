@@ -219,7 +219,10 @@ class Commands(object):
 
     def get_test(self, args):
 	ret = self.client.get_test(args.message, args.number)
-        return
+	output = {
+		'message': ret.message
+	}
+        return output
 
     def get_features(self, args):
         return self.client.features
