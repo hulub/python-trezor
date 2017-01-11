@@ -218,8 +218,8 @@ class Commands(object):
         return binascii.hexlify(self.client.get_entropy(args.size))
 
     def get_test(self, args):
-	ret = self.client.get_test(args.message, args.number)
-        return
+        ret = self.client.get_test(args.message, args.number)
+        return ret.message
 
     def get_features(self, args):
         return self.client.features

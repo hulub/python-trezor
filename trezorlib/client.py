@@ -542,7 +542,7 @@ class ProtocolMixin(object):
     def get_entropy(self, size):
         return self.call(proto.GetEntropy(size=size))
     
-    @field('test')
+#     @field('message')
     @expect(proto.TestOut)
     def get_test(self, message, number):
         return self.call(proto.TestIn(message=message,
