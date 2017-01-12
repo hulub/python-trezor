@@ -222,7 +222,13 @@ class Commands(object):
             t = json.load(data_file)
         ret = self.client.get_test(t["text"], t["number"])
         return ret.message
-    
+
+#     Eos Vote implementation ----------------------------------------------------------
+
+    def eos_get_publickey(self, args):
+        ret = self.client.eos_get_publickey()
+        return binascii.hexlify(ret.PublicKey)
+
     def eos_vote(self, args):
         with open(args.file_path) as data_file:    
             election = json.load(data_file)
@@ -387,6 +393,7 @@ class Commands(object):
     ethereum_sign_tx.help = 'Sign (and optionally publish) Ethereum transaction'
     get_entropy.help = 'Get example entropy'
     get_test.help = 'Get test message'
+    eos_get_publickey.help = 'Get Eos Public Key from Trezor'
     eos_vote.help = 'Generate Eos Vote Signature on Trezor'
     get_features.help = 'Retrieve device features and settings'
     get_public_node.help = 'Get public node of given path'
@@ -441,6 +448,8 @@ class Commands(object):
         (('message',), {'type': str, 'default': ''}),
         (('number',), {'type': int}),
     )
+    
+    eos_get_publickey.arguments = ()
     
     eos_vote.arguments = (
         (('file_path',), {'type': str}),

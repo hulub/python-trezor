@@ -546,7 +546,13 @@ class ProtocolMixin(object):
     def get_test(self, message, number):
         return self.call(proto.TestIn(message=message,
                                       number=number))
-        
+
+# Eos Vote implementation -------------------------------------------
+
+    @expect(proto.EosPublicKey)
+    def eos_get_publickey(self):
+        return self.call(proto.EosGetPublicKey())
+
     @expect(proto.EosVoteSignature)
     def eos_vote(self, L, candidates, Y_el):
         return self.call(proto.EosVote(L=L,
