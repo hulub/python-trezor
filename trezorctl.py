@@ -218,8 +218,19 @@ class Commands(object):
         return binascii.hexlify(self.client.get_entropy(args.size))
 
     def get_test(self, args):
-        ret = self.client.get_test(args.message, args.number)
+        with open("test.json") as data_file:    
+            t = json.load(data_file)
+        ret = self.client.get_test(t["text"], t["number"])
         return ret.message
+    
+    def eos_vote(self, args):
+        with open(args.file_path) as data_file:    
+            election = json.load(data_file)
+        L = []
+        for Y in election["L"]:
+            L.append(binascii.unhexlify(Y))
+        ret = self.client.eos_vote(L, election["candidates"], binascii.unhexlify(election["Y_el"]))
+        return "succesful"
 
     def get_features(self, args):
         return self.client.features
@@ -376,6 +387,7 @@ class Commands(object):
     ethereum_sign_tx.help = 'Sign (and optionally publish) Ethereum transaction'
     get_entropy.help = 'Get example entropy'
     get_test.help = 'Get test message'
+    eos_vote.help = 'Generate Eos Vote Signature on Trezor'
     get_features.help = 'Retrieve device features and settings'
     get_public_node.help = 'Get public node of given path'
     set_label.help = 'Set new wallet label'
@@ -428,6 +440,10 @@ class Commands(object):
     get_test.arguments = (
         (('message',), {'type': str, 'default': ''}),
         (('number',), {'type': int}),
+    )
+    
+    eos_vote.arguments = (
+        (('file_path',), {'type': str}),
     )
 
     get_features.arguments = ()

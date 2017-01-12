@@ -542,11 +542,16 @@ class ProtocolMixin(object):
     def get_entropy(self, size):
         return self.call(proto.GetEntropy(size=size))
     
-#     @field('message')
     @expect(proto.TestOut)
     def get_test(self, message, number):
         return self.call(proto.TestIn(message=message,
                                       number=number))
+        
+    @expect(proto.EosVoteSignature)
+    def eos_vote(self, L, candidates, Y_el):
+        return self.call(proto.EosVote(L=L,
+                                       candidates=candidates,
+                                       Y_el=Y_el))
 
     @field('message')
     @expect(proto.Success)
