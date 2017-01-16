@@ -1,0 +1,25 @@
+{
+    "H_malleable": "026863ad18ca6b56c3ff555427d64fad4f63bbac5dfcc82cb26f4e9baf3b40aa0d", 
+    "V_encrypted": {
+        "R_v": "024ed4d504d917794bcf883bd6c70292ce3c7142a0fbe5fbeff0cb6e408efcd2b6", 
+        "V_hat": "022b807dbebef49ab876431e9984182b4259b7105e31c601f0f1fb9443f9aea9fe"
+    }, 
+    "Y_tilde_malleable": "0299ebd168499440c151e5233e7803de0888ff9ca2fdc45f71e12c3a9f5c207671", 
+    "c_0": "ccb78b7816e00e72a2cd104f40a9fcf6486f2d2eceb90fd237556bf2b281ed82", 
+    "mu_encrypted": {
+        "R_mu": "03de313b8d28dc1bc4a684b4af22ccf6289e914b864cffeb85b3e035020e868841", 
+        "mu_hat": "73ab8574bfd39dae382754ffa023fcfad99be1de6de7ffe88c17f3987c671231"
+    }, 
+    "s": [
+        "e0d8b733ddb28c2c3ff66fc2e69075df9b8ad82dfe2c319cb73c878056f3e259", 
+        "965968f6a803efdacedb5cd0d5624a20fb5fec4ae0c5dcc2563d279651e4411e", 
+        "1d6ae2650dc5c196684f1c710e9fe25d8bc3f427b61e372283f7ec3b575f97ac", 
+        "f8468c99cac43b15cffcaded500b8e9fbe66812e6e59808d51c3c64e7e723093", 
+        "91b60b07cba343ad91c9c168cb997499b24c0431cf0f1eecf2a7a24f3c5eb3a6", 
+        "330d76d6f16df9cc03c7bdcc2dc8c4f170b302a42a5c4656b840db0d88f0ca54", 
+        "7504b90ed0757213ffb4b2e2ecb4cec3d8710caf7da8e290f164ba888914cfca", 
+        "ef1de2b0abfebeb35293bf4a0b2fa2a7ca5eabd21365f9c29263a49b64744a2c", 
+        "ce4b3437217648794889c39b8f9145da77981a93f422fe1ae103edfaf65e720b", 
+        "8937b79ec63028faf60ed6a18ee09307642b4db90c9e2ae262e81054de7b547f"
+    ]
+}

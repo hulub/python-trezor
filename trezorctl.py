@@ -190,7 +190,7 @@ class Commands(object):
                 to_address=args.to,
                 from_address=address,
                 value=value,
-                data="0x"+args.data))
+                data="0x" + args.data))
 
         if not nonce:
             nonce = eth.eth_getTransactionCount(address)
@@ -218,8 +218,8 @@ class Commands(object):
         return binascii.hexlify(self.client.get_entropy(args.size))
 
     def get_test(self, args):
-        with open("test.json") as data_file:    
-            t = json.load(data_file)
+        with open("test.json") as input:    
+            t = json.load(input)
         ret = self.client.get_test(t["text"], t["number"])
         return ret.message
 
@@ -230,13 +230,34 @@ class Commands(object):
         return binascii.hexlify(ret.PublicKey)
 
     def eos_vote(self, args):
-        with open(args.file_path) as data_file:    
-            election = json.load(data_file)
+        with open(args.file_path) as input:    
+            election = json.load(input)
         L = []
         for Y in election["L"]:
             L.append(binascii.unhexlify(Y))
         ret = self.client.eos_vote(L, election["candidates"], binascii.unhexlify(election["Y_el"]))
-        return "succesful"
+        s = []
+        for s_i in ret.s:
+            s.append(binascii.hexlify(s_i))
+        
+        output = {
+                'c_0': binascii.hexlify(ret.c_0),
+                's': s,
+                'H_malleable': binascii.hexlify(ret.H_malleable),
+                'Y_tilde_malleable': binascii.hexlify(ret.Y_tilde_malleable),
+                'mu_encrypted': {
+                        'R_mu': binascii.hexlify(ret.mu_encrypted.R),
+                        'mu_hat': binascii.hexlify(ret.mu_encrypted.n_hat)
+                    },
+                'V_encrypted': {
+                        'R_v': binascii.hexlify(ret.V_encrypted.R),
+                        'V_hat': binascii.hexlify(ret.V_encrypted.P_hat)
+                    }
+            }
+        with open('vote.json', 'w') as outfile:
+            json.dump(output, outfile, sort_keys=True, indent=4)
+        
+        return "successful"
 
     def get_features(self, args):
         return self.client.features
@@ -415,7 +436,7 @@ class Commands(object):
     set_u2f_counter.help = 'Set U2F counter'
     firmware_update.help = 'Upload new firmware to device (must be in bootloader mode)'
 
-    clear_session.arguments= ()
+    clear_session.arguments = ()
 
     get_address.arguments = (
         (('-c', '--coin'), {'type': str, 'default': 'Bitcoin'}),
