@@ -235,7 +235,7 @@ class Commands(object):
         L = []
         for Y in election["L"]:
             L.append(binascii.unhexlify(Y))
-        ret = self.client.eos_vote(L, election["candidates"], binascii.unhexlify(election["Y_el"]))
+        ret = self.client.eos_vote(L, election["candidates"], binascii.unhexlify(election["Y"]))
         s = []
         for s_i in ret.s:
             s.append(binascii.hexlify(s_i))
@@ -243,15 +243,22 @@ class Commands(object):
         output = {
                 'c_0': binascii.hexlify(ret.c_0),
                 's': s,
-                'H_malleable': binascii.hexlify(ret.H_malleable),
-                'Y_tilde_malleable': binascii.hexlify(ret.Y_tilde_malleable),
-                'mu_encrypted': {
-                        'R_mu': binascii.hexlify(ret.mu_encrypted.R),
-                        'mu_hat': binascii.hexlify(ret.mu_encrypted.n_hat)
+                'flag_enc': {
+                        'F': binascii.hexlify(ret.flag_enc.R),
+                        'phi': binascii.hexlify(ret.flag_enc.P_hat)
                     },
-                'V_encrypted': {
-                        'R_v': binascii.hexlify(ret.V_encrypted.R),
-                        'V_hat': binascii.hexlify(ret.V_encrypted.P_hat)
+                'identity_enc': {
+                        'T': binascii.hexlify(ret.identity_enc.R),
+                        'theta': binascii.hexlify(ret.identity_enc.P_hat)
+                    },
+                'vote_enc': {
+                        'D': binascii.hexlify(ret.vote_enc.R),
+                        'delta': binascii.hexlify(ret.vote_enc.P_hat)
+                    },
+                'WellFormatProof': {
+                        'Commitment1': binascii.hexlify(ret.WellFormatProof.Commitment1),
+                        'Commitment2': binascii.hexlify(ret.WellFormatProof.Commitment2),
+                        'response': binascii.hexlify(ret.WellFormatProof.response)
                     }
             }
         with open('vote.json', 'w') as outfile:

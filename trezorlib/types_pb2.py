@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='types.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x0btypes.proto\x1a google/protobuf/descriptor.proto\"1\n\x15PointElGamalTupleType\x12\t\n\x01R\x18\x01 \x02(\x0c\x12\r\n\x05P_hat\x18\x02 \x02(\x0c\"2\n\x16ScalarElGamalTupleType\x12\t\n\x01R\x18\x01 \x02(\x0c\x12\r\n\x05n_hat\x18\x02 \x02(\x0c\"\x80\x01\n\nHDNodeType\x12\r\n\x05\x64\x65pth\x18\x01 \x02(\r\x12\x13\n\x0b\x66ingerprint\x18\x02 \x02(\r\x12\x11\n\tchild_num\x18\x03 \x02(\r\x12\x12\n\nchain_code\x18\x04 \x02(\x0c\x12\x13\n\x0bprivate_key\x18\x05 \x01(\x0c\x12\x12\n\npublic_key\x18\x06 \x01(\x0c\">\n\x0eHDNodePathType\x12\x19\n\x04node\x18\x01 \x02(\x0b\x32\x0b.HDNodeType\x12\x11\n\taddress_n\x18\x02 \x03(\r\"\xdd\x01\n\x08\x43oinType\x12\x11\n\tcoin_name\x18\x01 \x01(\t\x12\x15\n\rcoin_shortcut\x18\x02 \x01(\t\x12\x17\n\x0c\x61\x64\x64ress_type\x18\x03 \x01(\r:\x01\x30\x12\x11\n\tmaxfee_kb\x18\x04 \x01(\x04\x12\x1c\n\x11\x61\x64\x64ress_type_p2sh\x18\x05 \x01(\r:\x01\x35\x12\x1e\n\x13\x61\x64\x64ress_type_p2wpkh\x18\x06 \x01(\r:\x01\x36\x12\x1e\n\x12\x61\x64\x64ress_type_p2wsh\x18\x07 \x01(\r:\x02\x31\x30\x12\x1d\n\x15signed_message_header\x18\x08 \x01(\t\"[\n\x18MultisigRedeemScriptType\x12 \n\x07pubkeys\x18\x01 \x03(\x0b\x32\x0f.HDNodePathType\x12\x12\n\nsignatures\x18\x02 \x03(\x0c\x12\t\n\x01m\x18\x03 \x01(\r\"\xeb\x01\n\x0bTxInputType\x12\x11\n\taddress_n\x18\x01 \x03(\r\x12\x11\n\tprev_hash\x18\x02 \x02(\x0c\x12\x12\n\nprev_index\x18\x03 \x02(\r\x12\x12\n\nscript_sig\x18\x04 \x01(\x0c\x12\x1c\n\x08sequence\x18\x05 \x01(\r:\n4294967295\x12\x33\n\x0bscript_type\x18\x06 \x01(\x0e\x32\x10.InputScriptType:\x0cSPENDADDRESS\x12+\n\x08multisig\x18\x07 \x01(\x0b\x32\x19.MultisigRedeemScriptType\x12\x0e\n\x06\x61mount\x18\x08 \x01(\x04\"\xaf\x01\n\x0cTxOutputType\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\x12\x11\n\taddress_n\x18\x02 \x03(\r\x12\x0e\n\x06\x61mount\x18\x03 \x02(\x04\x12&\n\x0bscript_type\x18\x04 \x02(\x0e\x32\x11.OutputScriptType\x12+\n\x08multisig\x18\x05 \x01(\x0b\x32\x19.MultisigRedeemScriptType\x12\x16\n\x0eop_return_data\x18\x06 \x01(\x0c\"8\n\x0fTxOutputBinType\x12\x0e\n\x06\x61mount\x18\x01 \x02(\x04\x12\x15\n\rscript_pubkey\x18\x02 \x02(\x0c\"\xef\x01\n\x0fTransactionType\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x1c\n\x06inputs\x18\x02 \x03(\x0b\x32\x0c.TxInputType\x12%\n\x0b\x62in_outputs\x18\x03 \x03(\x0b\x32\x10.TxOutputBinType\x12\x1e\n\x07outputs\x18\x05 \x03(\x0b\x32\r.TxOutputType\x12\x11\n\tlock_time\x18\x04 \x01(\r\x12\x12\n\ninputs_cnt\x18\x06 \x01(\r\x12\x13\n\x0boutputs_cnt\x18\x07 \x01(\r\x12\x12\n\nextra_data\x18\x08 \x01(\x0c\x12\x16\n\x0e\x65xtra_data_len\x18\t \x01(\r\"q\n\x14TxRequestDetailsType\x12\x15\n\rrequest_index\x18\x01 \x01(\r\x12\x0f\n\x07tx_hash\x18\x02 \x01(\x0c\x12\x16\n\x0e\x65xtra_data_len\x18\x03 \x01(\r\x12\x19\n\x11\x65xtra_data_offset\x18\x04 \x01(\r\"\\\n\x17TxRequestSerializedType\x12\x17\n\x0fsignature_index\x18\x01 \x01(\r\x12\x11\n\tsignature\x18\x02 \x01(\x0c\x12\x15\n\rserialized_tx\x18\x03 \x01(\x0c\"g\n\x0cIdentityType\x12\r\n\x05proto\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x0c\n\x04host\x18\x03 \x01(\t\x12\x0c\n\x04port\x18\x04 \x01(\t\x12\x0c\n\x04path\x18\x05 \x01(\t\x12\x10\n\x05index\x18\x06 \x01(\r:\x01\x30*\xcd\x02\n\x0b\x46\x61ilureType\x12\x1d\n\x19\x46\x61ilure_UnexpectedMessage\x10\x01\x12\x1a\n\x16\x46\x61ilure_ButtonExpected\x10\x02\x12\x17\n\x13\x46\x61ilure_SyntaxError\x10\x03\x12\x1b\n\x17\x46\x61ilure_ActionCancelled\x10\x04\x12\x17\n\x13\x46\x61ilure_PinExpected\x10\x05\x12\x18\n\x14\x46\x61ilure_PinCancelled\x10\x06\x12\x16\n\x12\x46\x61ilure_PinInvalid\x10\x07\x12\x1c\n\x18\x46\x61ilure_InvalidSignature\x10\x08\x12\x11\n\rFailure_Other\x10\t\x12\x1a\n\x16\x46\x61ilure_NotEnoughFunds\x10\n\x12\x1a\n\x16\x46\x61ilure_NotInitialized\x10\x0b\x12\x19\n\x15\x46\x61ilure_FirmwareError\x10\x63*\x87\x01\n\x10OutputScriptType\x12\x10\n\x0cPAYTOADDRESS\x10\x00\x12\x13\n\x0fPAYTOSCRIPTHASH\x10\x01\x12\x11\n\rPAYTOMULTISIG\x10\x02\x12\x11\n\rPAYTOOPRETURN\x10\x03\x12\x10\n\x0cPAYTOWITNESS\x10\x04\x12\x14\n\x10PAYTOP2SHWITNESS\x10\x05*l\n\x0fInputScriptType\x12\x10\n\x0cSPENDADDRESS\x10\x00\x12\x11\n\rSPENDMULTISIG\x10\x01\x12\x0c\n\x08\x45XTERNAL\x10\x02\x12\x10\n\x0cSPENDWITNESS\x10\x03\x12\x14\n\x10SPENDP2SHWITNESS\x10\x04*U\n\x0bRequestType\x12\x0b\n\x07TXINPUT\x10\x00\x12\x0c\n\x08TXOUTPUT\x10\x01\x12\n\n\x06TXMETA\x10\x02\x12\x0e\n\nTXFINISHED\x10\x03\x12\x0f\n\x0bTXEXTRADATA\x10\x04*\xdf\x02\n\x11\x42uttonRequestType\x12\x17\n\x13\x42uttonRequest_Other\x10\x01\x12\"\n\x1e\x42uttonRequest_FeeOverThreshold\x10\x02\x12\x1f\n\x1b\x42uttonRequest_ConfirmOutput\x10\x03\x12\x1d\n\x19\x42uttonRequest_ResetDevice\x10\x04\x12\x1d\n\x19\x42uttonRequest_ConfirmWord\x10\x05\x12\x1c\n\x18\x42uttonRequest_WipeDevice\x10\x06\x12\x1d\n\x19\x42uttonRequest_ProtectCall\x10\x07\x12\x18\n\x14\x42uttonRequest_SignTx\x10\x08\x12\x1f\n\x1b\x42uttonRequest_FirmwareCheck\x10\t\x12\x19\n\x15\x42uttonRequest_Address\x10\n\x12\x1b\n\x17\x42uttonRequest_PublicKey\x10\x0b*\x7f\n\x14PinMatrixRequestType\x12 \n\x1cPinMatrixRequestType_Current\x10\x01\x12!\n\x1dPinMatrixRequestType_NewFirst\x10\x02\x12\"\n\x1ePinMatrixRequestType_NewSecond\x10\x03*Z\n\x12RecoveryDeviceType\x12%\n!RecoveryDeviceType_ScrambledWords\x10\x00\x12\x1d\n\x19RecoveryDeviceType_Matrix\x10\x01*f\n\x0fWordRequestType\x12\x19\n\x15WordRequestType_Plain\x10\x00\x12\x1b\n\x17WordRequestType_Matrix9\x10\x01\x12\x1b\n\x17WordRequestType_Matrix6\x10\x02:4\n\x07wire_in\x12!.google.protobuf.EnumValueOptions\x18\xd2\x86\x03 \x01(\x08:5\n\x08wire_out\x12!.google.protobuf.EnumValueOptions\x18\xd3\x86\x03 \x01(\x08::\n\rwire_debug_in\x12!.google.protobuf.EnumValueOptions\x18\xd4\x86\x03 \x01(\x08:;\n\x0ewire_debug_out\x12!.google.protobuf.EnumValueOptions\x18\xd5\x86\x03 \x01(\x08\x42-\n\x1f\x63om.satoshilabs.trezor.protobufB\nTrezorType')
+  serialized_pb=_b('\n\x0btypes.proto\x1a google/protobuf/descriptor.proto\",\n\x10\x45lGamalTupleType\x12\t\n\x01R\x18\x01 \x02(\x0c\x12\r\n\x05P_hat\x18\x02 \x02(\x0c\"H\n\nDLEZKPType\x12\x13\n\x0b\x43ommitment1\x18\x01 \x02(\x0c\x12\x13\n\x0b\x43ommitment2\x18\x02 \x02(\x0c\x12\x10\n\x08response\x18\x03 \x02(\x0c\"\x80\x01\n\nHDNodeType\x12\r\n\x05\x64\x65pth\x18\x01 \x02(\r\x12\x13\n\x0b\x66ingerprint\x18\x02 \x02(\r\x12\x11\n\tchild_num\x18\x03 \x02(\r\x12\x12\n\nchain_code\x18\x04 \x02(\x0c\x12\x13\n\x0bprivate_key\x18\x05 \x01(\x0c\x12\x12\n\npublic_key\x18\x06 \x01(\x0c\">\n\x0eHDNodePathType\x12\x19\n\x04node\x18\x01 \x02(\x0b\x32\x0b.HDNodeType\x12\x11\n\taddress_n\x18\x02 \x03(\r\"\xdd\x01\n\x08\x43oinType\x12\x11\n\tcoin_name\x18\x01 \x01(\t\x12\x15\n\rcoin_shortcut\x18\x02 \x01(\t\x12\x17\n\x0c\x61\x64\x64ress_type\x18\x03 \x01(\r:\x01\x30\x12\x11\n\tmaxfee_kb\x18\x04 \x01(\x04\x12\x1c\n\x11\x61\x64\x64ress_type_p2sh\x18\x05 \x01(\r:\x01\x35\x12\x1e\n\x13\x61\x64\x64ress_type_p2wpkh\x18\x06 \x01(\r:\x01\x36\x12\x1e\n\x12\x61\x64\x64ress_type_p2wsh\x18\x07 \x01(\r:\x02\x31\x30\x12\x1d\n\x15signed_message_header\x18\x08 \x01(\t\"[\n\x18MultisigRedeemScriptType\x12 \n\x07pubkeys\x18\x01 \x03(\x0b\x32\x0f.HDNodePathType\x12\x12\n\nsignatures\x18\x02 \x03(\x0c\x12\t\n\x01m\x18\x03 \x01(\r\"\xeb\x01\n\x0bTxInputType\x12\x11\n\taddress_n\x18\x01 \x03(\r\x12\x11\n\tprev_hash\x18\x02 \x02(\x0c\x12\x12\n\nprev_index\x18\x03 \x02(\r\x12\x12\n\nscript_sig\x18\x04 \x01(\x0c\x12\x1c\n\x08sequence\x18\x05 \x01(\r:\n4294967295\x12\x33\n\x0bscript_type\x18\x06 \x01(\x0e\x32\x10.InputScriptType:\x0cSPENDADDRESS\x12+\n\x08multisig\x18\x07 \x01(\x0b\x32\x19.MultisigRedeemScriptType\x12\x0e\n\x06\x61mount\x18\x08 \x01(\x04\"\xaf\x01\n\x0cTxOutputType\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\x12\x11\n\taddress_n\x18\x02 \x03(\r\x12\x0e\n\x06\x61mount\x18\x03 \x02(\x04\x12&\n\x0bscript_type\x18\x04 \x02(\x0e\x32\x11.OutputScriptType\x12+\n\x08multisig\x18\x05 \x01(\x0b\x32\x19.MultisigRedeemScriptType\x12\x16\n\x0eop_return_data\x18\x06 \x01(\x0c\"8\n\x0fTxOutputBinType\x12\x0e\n\x06\x61mount\x18\x01 \x02(\x04\x12\x15\n\rscript_pubkey\x18\x02 \x02(\x0c\"\xef\x01\n\x0fTransactionType\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x1c\n\x06inputs\x18\x02 \x03(\x0b\x32\x0c.TxInputType\x12%\n\x0b\x62in_outputs\x18\x03 \x03(\x0b\x32\x10.TxOutputBinType\x12\x1e\n\x07outputs\x18\x05 \x03(\x0b\x32\r.TxOutputType\x12\x11\n\tlock_time\x18\x04 \x01(\r\x12\x12\n\ninputs_cnt\x18\x06 \x01(\r\x12\x13\n\x0boutputs_cnt\x18\x07 \x01(\r\x12\x12\n\nextra_data\x18\x08 \x01(\x0c\x12\x16\n\x0e\x65xtra_data_len\x18\t \x01(\r\"q\n\x14TxRequestDetailsType\x12\x15\n\rrequest_index\x18\x01 \x01(\r\x12\x0f\n\x07tx_hash\x18\x02 \x01(\x0c\x12\x16\n\x0e\x65xtra_data_len\x18\x03 \x01(\r\x12\x19\n\x11\x65xtra_data_offset\x18\x04 \x01(\r\"\\\n\x17TxRequestSerializedType\x12\x17\n\x0fsignature_index\x18\x01 \x01(\r\x12\x11\n\tsignature\x18\x02 \x01(\x0c\x12\x15\n\rserialized_tx\x18\x03 \x01(\x0c\"g\n\x0cIdentityType\x12\r\n\x05proto\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x0c\n\x04host\x18\x03 \x01(\t\x12\x0c\n\x04port\x18\x04 \x01(\t\x12\x0c\n\x04path\x18\x05 \x01(\t\x12\x10\n\x05index\x18\x06 \x01(\r:\x01\x30*\xcd\x02\n\x0b\x46\x61ilureType\x12\x1d\n\x19\x46\x61ilure_UnexpectedMessage\x10\x01\x12\x1a\n\x16\x46\x61ilure_ButtonExpected\x10\x02\x12\x17\n\x13\x46\x61ilure_SyntaxError\x10\x03\x12\x1b\n\x17\x46\x61ilure_ActionCancelled\x10\x04\x12\x17\n\x13\x46\x61ilure_PinExpected\x10\x05\x12\x18\n\x14\x46\x61ilure_PinCancelled\x10\x06\x12\x16\n\x12\x46\x61ilure_PinInvalid\x10\x07\x12\x1c\n\x18\x46\x61ilure_InvalidSignature\x10\x08\x12\x11\n\rFailure_Other\x10\t\x12\x1a\n\x16\x46\x61ilure_NotEnoughFunds\x10\n\x12\x1a\n\x16\x46\x61ilure_NotInitialized\x10\x0b\x12\x19\n\x15\x46\x61ilure_FirmwareError\x10\x63*\x87\x01\n\x10OutputScriptType\x12\x10\n\x0cPAYTOADDRESS\x10\x00\x12\x13\n\x0fPAYTOSCRIPTHASH\x10\x01\x12\x11\n\rPAYTOMULTISIG\x10\x02\x12\x11\n\rPAYTOOPRETURN\x10\x03\x12\x10\n\x0cPAYTOWITNESS\x10\x04\x12\x14\n\x10PAYTOP2SHWITNESS\x10\x05*l\n\x0fInputScriptType\x12\x10\n\x0cSPENDADDRESS\x10\x00\x12\x11\n\rSPENDMULTISIG\x10\x01\x12\x0c\n\x08\x45XTERNAL\x10\x02\x12\x10\n\x0cSPENDWITNESS\x10\x03\x12\x14\n\x10SPENDP2SHWITNESS\x10\x04*U\n\x0bRequestType\x12\x0b\n\x07TXINPUT\x10\x00\x12\x0c\n\x08TXOUTPUT\x10\x01\x12\n\n\x06TXMETA\x10\x02\x12\x0e\n\nTXFINISHED\x10\x03\x12\x0f\n\x0bTXEXTRADATA\x10\x04*\xdf\x02\n\x11\x42uttonRequestType\x12\x17\n\x13\x42uttonRequest_Other\x10\x01\x12\"\n\x1e\x42uttonRequest_FeeOverThreshold\x10\x02\x12\x1f\n\x1b\x42uttonRequest_ConfirmOutput\x10\x03\x12\x1d\n\x19\x42uttonRequest_ResetDevice\x10\x04\x12\x1d\n\x19\x42uttonRequest_ConfirmWord\x10\x05\x12\x1c\n\x18\x42uttonRequest_WipeDevice\x10\x06\x12\x1d\n\x19\x42uttonRequest_ProtectCall\x10\x07\x12\x18\n\x14\x42uttonRequest_SignTx\x10\x08\x12\x1f\n\x1b\x42uttonRequest_FirmwareCheck\x10\t\x12\x19\n\x15\x42uttonRequest_Address\x10\n\x12\x1b\n\x17\x42uttonRequest_PublicKey\x10\x0b*\x7f\n\x14PinMatrixRequestType\x12 \n\x1cPinMatrixRequestType_Current\x10\x01\x12!\n\x1dPinMatrixRequestType_NewFirst\x10\x02\x12\"\n\x1ePinMatrixRequestType_NewSecond\x10\x03*Z\n\x12RecoveryDeviceType\x12%\n!RecoveryDeviceType_ScrambledWords\x10\x00\x12\x1d\n\x19RecoveryDeviceType_Matrix\x10\x01*f\n\x0fWordRequestType\x12\x19\n\x15WordRequestType_Plain\x10\x00\x12\x1b\n\x17WordRequestType_Matrix9\x10\x01\x12\x1b\n\x17WordRequestType_Matrix6\x10\x02:4\n\x07wire_in\x12!.google.protobuf.EnumValueOptions\x18\xd2\x86\x03 \x01(\x08:5\n\x08wire_out\x12!.google.protobuf.EnumValueOptions\x18\xd3\x86\x03 \x01(\x08::\n\rwire_debug_in\x12!.google.protobuf.EnumValueOptions\x18\xd4\x86\x03 \x01(\x08:;\n\x0ewire_debug_out\x12!.google.protobuf.EnumValueOptions\x18\xd5\x86\x03 \x01(\x08\x42-\n\x1f\x63om.satoshilabs.trezor.protobufB\nTrezorType')
   ,
   dependencies=[google_dot_protobuf_dot_descriptor__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -83,8 +83,8 @@ _FAILURETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1695,
-  serialized_end=2028,
+  serialized_start=1712,
+  serialized_end=2045,
 )
 _sym_db.RegisterEnumDescriptor(_FAILURETYPE)
 
@@ -122,8 +122,8 @@ _OUTPUTSCRIPTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2031,
-  serialized_end=2166,
+  serialized_start=2048,
+  serialized_end=2183,
 )
 _sym_db.RegisterEnumDescriptor(_OUTPUTSCRIPTTYPE)
 
@@ -157,8 +157,8 @@ _INPUTSCRIPTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2168,
-  serialized_end=2276,
+  serialized_start=2185,
+  serialized_end=2293,
 )
 _sym_db.RegisterEnumDescriptor(_INPUTSCRIPTTYPE)
 
@@ -192,8 +192,8 @@ _REQUESTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2278,
-  serialized_end=2363,
+  serialized_start=2295,
+  serialized_end=2380,
 )
 _sym_db.RegisterEnumDescriptor(_REQUESTTYPE)
 
@@ -251,8 +251,8 @@ _BUTTONREQUESTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2366,
-  serialized_end=2717,
+  serialized_start=2383,
+  serialized_end=2734,
 )
 _sym_db.RegisterEnumDescriptor(_BUTTONREQUESTTYPE)
 
@@ -278,8 +278,8 @@ _PINMATRIXREQUESTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2719,
-  serialized_end=2846,
+  serialized_start=2736,
+  serialized_end=2863,
 )
 _sym_db.RegisterEnumDescriptor(_PINMATRIXREQUESTTYPE)
 
@@ -301,8 +301,8 @@ _RECOVERYDEVICETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2848,
-  serialized_end=2938,
+  serialized_start=2865,
+  serialized_end=2955,
 )
 _sym_db.RegisterEnumDescriptor(_RECOVERYDEVICETYPE)
 
@@ -328,8 +328,8 @@ _WORDREQUESTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2940,
-  serialized_end=3042,
+  serialized_start=2957,
+  serialized_end=3059,
 )
 _sym_db.RegisterEnumDescriptor(_WORDREQUESTTYPE)
 
@@ -416,22 +416,22 @@ wire_debug_out = _descriptor.FieldDescriptor(
   options=None)
 
 
-_POINTELGAMALTUPLETYPE = _descriptor.Descriptor(
-  name='PointElGamalTupleType',
-  full_name='PointElGamalTupleType',
+_ELGAMALTUPLETYPE = _descriptor.Descriptor(
+  name='ElGamalTupleType',
+  full_name='ElGamalTupleType',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='R', full_name='PointElGamalTupleType.R', index=0,
+      name='R', full_name='ElGamalTupleType.R', index=0,
       number=1, type=12, cpp_type=9, label=2,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='P_hat', full_name='PointElGamalTupleType.P_hat', index=1,
+      name='P_hat', full_name='ElGamalTupleType.P_hat', index=1,
       number=2, type=12, cpp_type=9, label=2,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -450,27 +450,34 @@ _POINTELGAMALTUPLETYPE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=49,
-  serialized_end=98,
+  serialized_end=93,
 )
 
 
-_SCALARELGAMALTUPLETYPE = _descriptor.Descriptor(
-  name='ScalarElGamalTupleType',
-  full_name='ScalarElGamalTupleType',
+_DLEZKPTYPE = _descriptor.Descriptor(
+  name='DLEZKPType',
+  full_name='DLEZKPType',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='R', full_name='ScalarElGamalTupleType.R', index=0,
+      name='Commitment1', full_name='DLEZKPType.Commitment1', index=0,
       number=1, type=12, cpp_type=9, label=2,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='n_hat', full_name='ScalarElGamalTupleType.n_hat', index=1,
+      name='Commitment2', full_name='DLEZKPType.Commitment2', index=1,
       number=2, type=12, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='response', full_name='DLEZKPType.response', index=2,
+      number=3, type=12, cpp_type=9, label=2,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -487,8 +494,8 @@ _SCALARELGAMALTUPLETYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=100,
-  serialized_end=150,
+  serialized_start=95,
+  serialized_end=167,
 )
 
 
@@ -553,8 +560,8 @@ _HDNODETYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=153,
-  serialized_end=281,
+  serialized_start=170,
+  serialized_end=298,
 )
 
 
@@ -591,8 +598,8 @@ _HDNODEPATHTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=283,
-  serialized_end=345,
+  serialized_start=300,
+  serialized_end=362,
 )
 
 
@@ -671,8 +678,8 @@ _COINTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=348,
-  serialized_end=569,
+  serialized_start=365,
+  serialized_end=586,
 )
 
 
@@ -716,8 +723,8 @@ _MULTISIGREDEEMSCRIPTTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=571,
-  serialized_end=662,
+  serialized_start=588,
+  serialized_end=679,
 )
 
 
@@ -796,8 +803,8 @@ _TXINPUTTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=665,
-  serialized_end=900,
+  serialized_start=682,
+  serialized_end=917,
 )
 
 
@@ -862,8 +869,8 @@ _TXOUTPUTTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=903,
-  serialized_end=1078,
+  serialized_start=920,
+  serialized_end=1095,
 )
 
 
@@ -900,8 +907,8 @@ _TXOUTPUTBINTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1080,
-  serialized_end=1136,
+  serialized_start=1097,
+  serialized_end=1153,
 )
 
 
@@ -987,8 +994,8 @@ _TRANSACTIONTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1139,
-  serialized_end=1378,
+  serialized_start=1156,
+  serialized_end=1395,
 )
 
 
@@ -1039,8 +1046,8 @@ _TXREQUESTDETAILSTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1380,
-  serialized_end=1493,
+  serialized_start=1397,
+  serialized_end=1510,
 )
 
 
@@ -1084,8 +1091,8 @@ _TXREQUESTSERIALIZEDTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1495,
-  serialized_end=1587,
+  serialized_start=1512,
+  serialized_end=1604,
 )
 
 
@@ -1150,8 +1157,8 @@ _IDENTITYTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1589,
-  serialized_end=1692,
+  serialized_start=1606,
+  serialized_end=1709,
 )
 
 _HDNODEPATHTYPE.fields_by_name['node'].message_type = _HDNODETYPE
@@ -1163,8 +1170,8 @@ _TXOUTPUTTYPE.fields_by_name['multisig'].message_type = _MULTISIGREDEEMSCRIPTTYP
 _TRANSACTIONTYPE.fields_by_name['inputs'].message_type = _TXINPUTTYPE
 _TRANSACTIONTYPE.fields_by_name['bin_outputs'].message_type = _TXOUTPUTBINTYPE
 _TRANSACTIONTYPE.fields_by_name['outputs'].message_type = _TXOUTPUTTYPE
-DESCRIPTOR.message_types_by_name['PointElGamalTupleType'] = _POINTELGAMALTUPLETYPE
-DESCRIPTOR.message_types_by_name['ScalarElGamalTupleType'] = _SCALARELGAMALTUPLETYPE
+DESCRIPTOR.message_types_by_name['ElGamalTupleType'] = _ELGAMALTUPLETYPE
+DESCRIPTOR.message_types_by_name['DLEZKPType'] = _DLEZKPTYPE
 DESCRIPTOR.message_types_by_name['HDNodeType'] = _HDNODETYPE
 DESCRIPTOR.message_types_by_name['HDNodePathType'] = _HDNODEPATHTYPE
 DESCRIPTOR.message_types_by_name['CoinType'] = _COINTYPE
@@ -1189,19 +1196,19 @@ DESCRIPTOR.extensions_by_name['wire_out'] = wire_out
 DESCRIPTOR.extensions_by_name['wire_debug_in'] = wire_debug_in
 DESCRIPTOR.extensions_by_name['wire_debug_out'] = wire_debug_out
 
-PointElGamalTupleType = _reflection.GeneratedProtocolMessageType('PointElGamalTupleType', (_message.Message,), dict(
-  DESCRIPTOR = _POINTELGAMALTUPLETYPE,
+ElGamalTupleType = _reflection.GeneratedProtocolMessageType('ElGamalTupleType', (_message.Message,), dict(
+  DESCRIPTOR = _ELGAMALTUPLETYPE,
   __module__ = 'types_pb2'
-  # @@protoc_insertion_point(class_scope:PointElGamalTupleType)
+  # @@protoc_insertion_point(class_scope:ElGamalTupleType)
   ))
-_sym_db.RegisterMessage(PointElGamalTupleType)
+_sym_db.RegisterMessage(ElGamalTupleType)
 
-ScalarElGamalTupleType = _reflection.GeneratedProtocolMessageType('ScalarElGamalTupleType', (_message.Message,), dict(
-  DESCRIPTOR = _SCALARELGAMALTUPLETYPE,
+DLEZKPType = _reflection.GeneratedProtocolMessageType('DLEZKPType', (_message.Message,), dict(
+  DESCRIPTOR = _DLEZKPTYPE,
   __module__ = 'types_pb2'
-  # @@protoc_insertion_point(class_scope:ScalarElGamalTupleType)
+  # @@protoc_insertion_point(class_scope:DLEZKPType)
   ))
-_sym_db.RegisterMessage(ScalarElGamalTupleType)
+_sym_db.RegisterMessage(DLEZKPType)
 
 HDNodeType = _reflection.GeneratedProtocolMessageType('HDNodeType', (_message.Message,), dict(
   DESCRIPTOR = _HDNODETYPE,
