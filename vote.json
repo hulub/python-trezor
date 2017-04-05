@@ -1,20 +1,28 @@
 {
-    "H_malleable": "03ab588d2a3ab2e66143b1f188b5dca282a48e158c9ad8f5a1f544a109889aca8e", 
-    "V_encrypted": {
-        "R_v": "02f15445f910fcbda22e06590829628a7d4cac7a6bca3020360f9183b6556473d2", 
-        "V_hat": "021ac5af3dfb1e6ace6b37a972e401d6a86f683dafec17db87717b96c6cec3a7b2"
+    "c_0": "a0011bea71e57dc4771d4050c994ccc7d8e77c00cb37409e96cd7d2defc467af", 
+    "flag_enc": {
+        "C": "035abc19d20071fd8fb81d073c388aadc1d3c5a8f79756509decfd4f023766266b", 
+        "R": "02f0dcfeac4b2d6da7f5249d58bf58ed7d71146ac613ce8487947dd396c937a839"
     }, 
-    "Y_tilde_malleable": "03603b66815d343240a2d3aa2449624f24b04f65ae24c687bf2b6351d3b516c6f9", 
-    "c_0": "d1252e65ec77ece0dd01011f3882a5f3bb5030db80f6a24fa7858e380723430d", 
-    "mu_encrypted": {
-        "R_mu": "02a7897bea524609e32683ab0aadfe1bcb53197a6f827d44ee409017432c110913", 
-        "mu_hat": "a9c35a9ea625cf7ddef320ef27166c83bdde749888698f97a4c57d8da97f061d"
+    "identity_enc": {
+        "C": "03725e4a8c8016332aa7ff65052bd6831b8e39e0adb4330a7a6948b8999bb84ed6", 
+        "R": "027589bb2c3125d5e881fbe6779a4bbaa5d577351a54125c2f2866c91cdc7cb579"
     }, 
     "s": [
-        "c5a2442b066a195c31d7c82145f1b4274639ad878f9718c7bf3853fe75e7b25f", 
-        "0598748aef8194a91fd9e6dfe0fde353be22737f92ad16bcee54423013f8bb20", 
-        "a2acbad0e63e75fbf2785cca5f2c8c8495e44f71f8d89e60807309f5b4bee7fb", 
-        "ad7d552099dfb4de0d0a976cab3ef84bc4832b539185be6eb531184c7dd4dea2", 
-        "2888e7f07a65af2d27bca2f342af5197a401d5639703a7cf398783305fadd18f"
-    ]
+        "2ab86dde637fc86b802bc8c9bb1e10d35a22b29221e64dd81ecbe7c6eeae567e", 
+        "78012eb6feca2a14223ebe3efad23a4e80b8d9d61e1340af7140d8d34f71b085", 
+        "e158120a5e21e41967a132f798df7f856e5fcab29fb8a3570c711b5e304062a5", 
+        "2feaa857ce06449bac60aa76f9bd3ab7a6e8035c9a4b8db3b4bbb9acae902f8b", 
+        "e95294c1aecabad2cea4afca4a98006b27950a7fc52d51242b1ed514ebdc786d"
+    ], 
+    "vote_enc": {
+        "C": "03c65959be82fa345ccdf2084ad778ff1e0de399bdab1a8814dcf498c0d1988e5c", 
+        "R": "02530f31e7f652396c15c1e7f50053d75ef8e0e1877911959c1b28713d2c68b971"
+    }, 
+    "well_format_proof": {
+        "challenge": "9c68602fabce80fe59b49948eee11da08693c8e24a8c12f02f9996ec1f1d655f", 
+        "commitment_1": "0298c016ecd679610735d77e37377fdc9585d92851c28b35feeec74eebf219f4b3", 
+        "commitment_2": "037d2d5f67dab0f836746ad970431918ffe03b160f85acdeb8fa9a5d5c38b051dc", 
+        "response": "d701b6466c5651273c6fbbf4d658cd5d6508e8d96a140e2f1cb66b30968b47d3"
+    }
 }

@@ -244,21 +244,22 @@ class Commands(object):
                 'c_0': binascii.hexlify(ret.c_0),
                 's': s,
                 'flag_enc': {
-                        'F': binascii.hexlify(ret.flag_enc.R),
-                        'phi': binascii.hexlify(ret.flag_enc.P_hat)
+                        'R': binascii.hexlify(ret.flag_enc.R),
+                        'C': binascii.hexlify(ret.flag_enc.C)
                     },
                 'identity_enc': {
-                        'T': binascii.hexlify(ret.identity_enc.R),
-                        'theta': binascii.hexlify(ret.identity_enc.P_hat)
+                        'R': binascii.hexlify(ret.identity_enc.R),
+                        'C': binascii.hexlify(ret.identity_enc.C)
                     },
                 'vote_enc': {
-                        'D': binascii.hexlify(ret.vote_enc.R),
-                        'delta': binascii.hexlify(ret.vote_enc.P_hat)
+                        'R': binascii.hexlify(ret.vote_enc.R),
+                        'C': binascii.hexlify(ret.vote_enc.C)
                     },
-                'WellFormatProof': {
-                        'Commitment1': binascii.hexlify(ret.WellFormatProof.Commitment1),
-                        'Commitment2': binascii.hexlify(ret.WellFormatProof.Commitment2),
-                        'response': binascii.hexlify(ret.WellFormatProof.response)
+                'well_format_proof': {
+                        'commitment_1': binascii.hexlify(ret.well_format_proof.commitment_1),
+                        'commitment_2': binascii.hexlify(ret.well_format_proof.commitment_2),
+                        'challenge': binascii.hexlify(ret.well_format_proof.challenge),
+                        'response': binascii.hexlify(ret.well_format_proof.response)
                     }
             }
         with open('vote.json', 'w') as outfile:

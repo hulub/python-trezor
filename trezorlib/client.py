@@ -554,10 +554,10 @@ class ProtocolMixin(object):
         return self.call(proto.EosGetPublicKey())
 
     @expect(proto.EosVoteSignature)
-    def eos_vote(self, L, candidates, Y_el):
+    def eos_vote(self, L, candidates, Y):
         return self.call(proto.EosVote(L=L,
                                        candidates=candidates,
-                                       Y_el=Y_el))
+                                       Y=Y))
 
     @field('message')
     @expect(proto.Success)
