@@ -1,7 +1,7 @@
 #!/bin/bash
 CURDIR=$(pwd)
 
-cd $CURDIR/../protob
+cd $CURDIR/../trezor-firmware/vendor/trezor-common/protob
 
 for i in messages types ; do
     protoc --python_out=$CURDIR/trezorlib/ -I/usr/include -I. $i.proto

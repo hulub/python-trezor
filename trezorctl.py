@@ -241,28 +241,37 @@ class Commands(object):
             s.append(binascii.hexlify(s_i))
         
         output = {
-                'c_0': binascii.hexlify(ret.c_0),
-                's': s,
-                'flag_enc': {
-                        'R': binascii.hexlify(ret.flag_enc.R),
-                        'C': binascii.hexlify(ret.flag_enc.C)
+                'ballot': {
+                        'color_enc': {
+                                'R': binascii.hexlify(ret.color_enc.R),
+                                'C': binascii.hexlify(ret.color_enc.C)
+                            },
+                        'eID_enc': {
+                                'R': binascii.hexlify(ret.eID_enc.R),
+                                'C': binascii.hexlify(ret.eID_enc.C)
+                            },
+                        'vote_enc': {
+                                'R': binascii.hexlify(ret.vote_enc.R),
+                                'C': binascii.hexlify(ret.vote_enc.C)
+                            }
                     },
-                'identity_enc': {
-                        'R': binascii.hexlify(ret.identity_enc.R),
-                        'C': binascii.hexlify(ret.identity_enc.C)
+                'sigma': {
+                        'c1': binascii.hexlify(ret.c1),
+                        's': s
                     },
-                'vote_enc': {
-                        'R': binascii.hexlify(ret.vote_enc.R),
-                        'C': binascii.hexlify(ret.vote_enc.C)
+                'PK_correct_enc': {
+                        'commitment1': binascii.hexlify(ret.PK_correct_enc.commitment1),
+                        'commitment2': binascii.hexlify(ret.PK_correct_enc.commitment2),
+                        'challenge': binascii.hexlify(ret.PK_correct_enc.challenge),
+                        'response': binascii.hexlify(ret.PK_correct_enc.response)
                     },
-                'well_format_proof': {
-                        'commitment_1': binascii.hexlify(ret.well_format_proof.commitment_1),
-                        'commitment_2': binascii.hexlify(ret.well_format_proof.commitment_2),
-                        'challenge': binascii.hexlify(ret.well_format_proof.challenge),
-                        'response': binascii.hexlify(ret.well_format_proof.response)
+                'PK_vote': {
+                        'commitment': binascii.hexlify(ret.PK_vote.commitment),
+                        'challenge': binascii.hexlify(ret.PK_vote.challenge),
+                        'response': binascii.hexlify(ret.PK_vote.response)
                     }
             }
-        with open('vote.json', 'w') as outfile:
+        with open('signed_ballot.json', 'w') as outfile:
             json.dump(output, outfile, sort_keys=True, indent=4)
         
         return "successful"
